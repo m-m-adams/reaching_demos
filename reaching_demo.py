@@ -34,11 +34,11 @@ def reflect_x(h, w, xt, yt, xm, ym):
 
 
 def rotate_90(h, w, xt, yt, xm, ym):
-    x_r = xm-h/2
-    y_r = ym-h/2
+    x_r = xm-w/2
+    y_r = ym-h
     radius, angle = cart2pol(x_r, y_r)
 
-    angle -= 1.57
+    angle += 0.78
     xz, yz = pol2cart(radius, angle)
     return xz+w/2, yz+h
 
